@@ -5,14 +5,15 @@ var builder = WebApplication.CreateBuilder(args);
 
 builder.Services.AddHttpClient<ProductService>(c =>
 {
-    var url = builder.Configuration["ProductEndpoint"] ?? throw new InvalidOperationException("ProductEndpoint is not set");
-
-    c.BaseAddress = new(url);
+    //var url = builder.Configuration["ProductEndpoint"] ?? throw new InvalidOperationException("ProductEndpoint is not set");
+    c.BaseAddress = new("https+http://products");
 });
 
 // Add services to the container.
 builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
+
+builder.AddServiceDefaults();
 
 var app = builder.Build();
 
@@ -31,5 +32,7 @@ app.UseAntiforgery();
 
 app.MapRazorComponents<App>()
    .AddInteractiveServerRenderMode();
+
+app.MapDefaultEndpoints();
 
 app.Run();

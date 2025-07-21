@@ -9,6 +9,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\DataEntities\DataEntities.csproj" />
+    <ProjectReference Include="..\eShopLite.ServiceDefaults\eShopLite.ServiceDefaults.csproj" />
   </ItemGroup>
 
 </Project>
