@@ -3,6 +3,8 @@ using Store.Services;
 
 var builder = WebApplication.CreateBuilder(args);
 
+builder.AddRedisOutputCache("redis");
+
 builder.AddServiceDefaults();
 
 builder.Services.AddHttpClient<ProductService>(c =>
@@ -15,6 +17,8 @@ builder.Services.AddRazorComponents()
                 .AddInteractiveServerComponents();
 
 var app = builder.Build();
+
+app.UseOutputCache();
 
 app.MapDefaultEndpoints();
 
