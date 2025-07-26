@@ -36,7 +36,7 @@ public static class DbInitializer
 
         var products = new List<Product>
         {
-            new Product { Name = "Solar Powered Flashlight", Description = "A fantastic product for outdoor enthusiasts", Price = 19.99m, ImageUrl = "product1.png" },
+            new Product { Name = "박태영", Description = "그런데 박태영이 맞긴 합니다..", Price = 999999m, ImageUrl = "product1.png" },
             new Product { Name = "Hiking Poles", Description = "Ideal for camping and hiking trips", Price = 24.99m, ImageUrl = "product2.png" },
             new Product { Name = "Outdoor Rain Jacket", Description = "This product will keep you warm and dry in all weathers", Price = 49.99m, ImageUrl = "product3.png" },
             new Product { Name = "Survival Kit", Description = "A must-have for any outdoor adventurer", Price = 99.99m, ImageUrl = "product4.png" },
